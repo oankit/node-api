@@ -1,4 +1,5 @@
 const fs = require('fs');
+require('dotenv').config({ path: '../.env' });
 const csv = require('csv-parser');
 const pool = require('./db'); // Assuming db.js has PostgreSQL connection setup
 

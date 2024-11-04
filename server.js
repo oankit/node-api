@@ -5,6 +5,9 @@ const apiRoutes = require('./routes/apiRoutes');
 
 dotenv.config(); // Load environment variables
 
+console.log('DB Password:', process.env.DB_PASSWORD);
+console.log('Password Type:', typeof process.env.DB_PASSWORD); // Should output 'string'
+
 const app = express();
 const port = process.env.PORT || 3000;
 

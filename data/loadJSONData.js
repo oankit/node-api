@@ -1,5 +1,6 @@
 const fs = require('fs');
-const pool = require('./db'); // Assuming db.js has PostgreSQL connection setup
+require('dotenv').config({ path: '../.env' });
+const pool = require('../config/db'); // Assuming db.js has PostgreSQL connection setup;
 
 const loadJSONData = async () => {
   const data = JSON.parse(fs.readFileSync('users.json', 'utf8'));
